@@ -7,18 +7,30 @@ control which indexes and attributes are loaded as well as inspect downloaded
 data.
 
 This is a fork of Luke Rosiak's [PySEC](https://github.com/lukerosiak/pysec) and chrisspen's [django-sec](https://github.com/chrisspen/django-sec),
-modified to act as an XBRL parser.
+modified to act as an XBRL parser. IMPORTANT NOTE: the database cannot be sqlite3, due to atomic instabilities -- previous forks have been, but Django 1.6 does not play nice with sqlite3 in this particular case. Use the included settings.py file, and create an sql database (or anything other than sqlite3)
 
 Installation
 ------------
 
-Install the package using pip via:
+Install the package from chrisspen's fork using pip via:
 
     pip install https://github.com/chrisspen/django-sec/archive/master.zip
 
-then add `django_sec` to your `INSTALLED_APPS` and run:
+If Django < 1.7, then install South for migrations:
+
+    pip install south
+
+then add `django_sec` (and `south` if you installed it) to your `INSTALLED_APPS` in `settings.py` and run:
+
+    python manage.py syncdb
+
+You should get a message saying that `django-sec` is unsynced. Run
 
     python manage.py migrate django_sec
+
+OR
+
+    ./manage.py migrate
 
 Usage
 -----
