@@ -60,10 +60,10 @@ WSGI_APPLICATION = 'parse.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'parsed_data',
-        'USER': 'admin',
-        'PASSWORD': 'randomkey123itryhmes',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # or whatever, anything but sqlite3
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',        
     }
 }
