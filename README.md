@@ -1,4 +1,4 @@
-Django-SEC
+PARSE
 ==========
 
 This is a Django app that downloads all SEC filings from the EDGAR database
@@ -6,9 +6,8 @@ into your local database. It provides an admin interface to allow you to
 control which indexes and attributes are loaded as well as inspect downloaded
 data.
 
-This is a fork of Luke Rosiak's [PySEC](https://github.com/lukerosiak/pysec),
-modified to act as a pluggable Django app with fleshed out admin interface and
-more efficient data import commands.
+This is a fork of Luke Rosiak's [PySEC](https://github.com/lukerosiak/pysec) and chrisspen's [django-sec](https://github.com/chrisspen/django-sec),
+modified to act as an XBRL parser.
 
 Installation
 ------------
