@@ -20,6 +20,10 @@ If Django < 1.7, then install South for migrations:
 
     pip install south
 
+Install other requirements from `requirements.txt`:
+
+    pip install -r requirements.txt
+
 then add `django_sec` (and `south` if you installed it) to your `INSTALLED_APPS` in `settings.py` and run:
 
     python manage.py syncdb
